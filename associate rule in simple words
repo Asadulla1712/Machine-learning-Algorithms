@@ -1,0 +1,14 @@
+Associate rule is one of the unsupervised ML algorithm, we mainly use this for cross-selling the things or for up-sellings the things.
+For example using this rule we can suggest the customer to buy both the items like, if a customer orders biryani, he may also order coke.
+For example {Bread,Egg} {Milk}
+                  |        |
+            (Antecedent) (consequent)
+We have three kinds of equation used in this rule they are 1)support 2)confidence 3)Lift
+1)Support: It is calculated in this way support({X}-{y} = Transactions containing both X and y / Total number of transactions (assume X as biryani and y as coke.)
+2)Confidence : Occurance of consequent on the cart given that cart already has the antecedents 
+   Confidence({X} {y}) = Transactions containing both X and y / Transactions containing X
+3)Lift: Lift controls for the support (frequency) of consequent while calculating the conditional probabilty of occurance of {y} given {X}
+   Lift({X} {y}) = (Transaction of both (X and y) /(Transaction of X)
+                    /Fraction of transaction containing y
+                    
+To support this rule I have used my dummy dataset to demostrate the things.
